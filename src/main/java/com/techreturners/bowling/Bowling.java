@@ -3,6 +3,10 @@ package com.techreturners.bowling;
 public class Bowling {
 
     public int calculateScore(String scoreboard){
-        return 0;
+        int score =  0;
+        for (int i=0; i< scoreboard.length();i++){
+            score += Character.getNumericValue(scoreboard.charAt(i));
+        }
+        return score;
     }
 }

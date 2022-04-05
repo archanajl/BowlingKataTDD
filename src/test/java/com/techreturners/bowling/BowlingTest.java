@@ -35,4 +35,10 @@ public class BowlingTest {
         Assertions.assertEquals(score, 74);
     }
 
+    @Test
+    public void checkCalculateScoreOneRollswithBothMiss(){
+        String scoreboard = "--";
+        int score = bowl.calculateScore(scoreboard);
+        Assertions.assertEquals(score, 0);
+    }
 }

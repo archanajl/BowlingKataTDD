@@ -8,7 +8,10 @@ public class Bowling {
         String onlyScores = scoreboard.replaceAll("\\s+","");
 
         for (int i=0; i< onlyScores.length();i++){
-            score += Character.getNumericValue(onlyScores.charAt(i));
+            if (onlyScores.charAt(i) != '-'){
+                score += Character.getNumericValue(onlyScores.charAt(i));
+            }
+
         }
         return score;
     }

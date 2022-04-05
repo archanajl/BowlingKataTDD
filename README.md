@@ -41,7 +41,7 @@ We can briefly summarize the scoring for this form of bowling:
   
   - Step Four:
   
-  Implemented the 'spare' scenario. It is given as '\'. In this case, first I included the spare ones in the start and middle of the frames.
+  Implemented the 'spare' scenario. It is given as '/'. In this case, first I included the spare ones in the start and middle of the frames.
   I had to remove the previous value and add 10 to it. To this I have to add the next throw's value as well. 
   The next value will be added as a new throw as well.
   If the spare appears as the last entry, the user gets an extra throw. But in this case, To this I have to add the next throw's value as well.

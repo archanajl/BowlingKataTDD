@@ -15,6 +15,15 @@ public class Bowling {
                     score += Character.getNumericValue(onlyScores.charAt(i + 1)) + 10 - Character.getNumericValue(onlyScores.charAt(i - 1));
                 }
             }
+            else if (onlyScores.charAt(i) == 'X'){
+                if ( i == onlyScores.length()-3 ) {
+                    score += 10;
+                }
+                else{
+                    score += Character.getNumericValue(onlyScores.charAt(i + 1)) + Character.getNumericValue(onlyScores.charAt(i + 2)) + 10;
+
+                }
+            }
             else if (onlyScores.charAt(i) != '-'){
                 score += Character.getNumericValue(onlyScores.charAt(i));
             }

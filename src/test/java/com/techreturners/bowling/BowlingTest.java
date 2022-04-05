@@ -71,6 +71,13 @@ public class BowlingTest {
     }
 
     @Test
+    public void checkCalculateScoreAllRollswithAllMiss(){
+        String scoreboard = "9- 9- 9- 9- 9- 9- 9- 9- 9- 9-";
+        int score = bowl.calculateScore(scoreboard);
+        Assertions.assertEquals(score, 90);
+    }
+
+    @Test
     public void checkCalculateScoreWithOneRollWithSpare(){
         String scoreboard = "1/ 4";
         int score = bowl.calculateScore(scoreboard);
@@ -96,5 +103,33 @@ public class BowlingTest {
         String scoreboard = "5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/5";
         int score = bowl.calculateScore(scoreboard);
         Assertions.assertEquals(score, 150);
+    }
+
+    @Test
+    public void checkCalculateScoreWithOneRollWithStrike(){
+        String scoreboard = "X 43";
+        int score = bowl.calculateScore(scoreboard);
+        Assertions.assertEquals(score, 17);
+    }
+
+    @Test
+    public void checkCalculateScoreWithTwoRollsWithLastStrike(){
+        String scoreboard = "36 X 43";
+        int score = bowl.calculateScore(scoreboard);
+        Assertions.assertEquals(score, 26);
+    }
+
+    @Test
+    public void checkCalculateScoreWithTwoRollsWithFirstStrike(){
+        String scoreboard = "X 36 43";
+        int score = bowl.calculateScore(scoreboard);
+        Assertions.assertEquals(score, 35);
+    }
+
+    @Test
+    public void checkCalculateScoreWithTwoRollsWithBetweenStrike(){
+        String scoreboard = "44 X 36 43";
+        int score = bowl.calculateScore(scoreboard);
+        Assertions.assertEquals(score, 43);
     }
 }

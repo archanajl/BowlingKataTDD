@@ -70,5 +70,31 @@ public class BowlingTest {
         Assertions.assertEquals(score, 63);
     }
 
+    @Test
+    public void checkCalculateScoreWithOneRollWithSpare(){
+        String scoreboard = "1/ 4";
+        int score = bowl.calculateScore(scoreboard);
+        Assertions.assertEquals(score, 14);
+    }
 
+    @Test
+    public void checkCalculateScoreTwoRollswithSpare(){
+        String scoreboard = "1/ 23";
+        int score = bowl.calculateScore(scoreboard);
+        Assertions.assertEquals(score, 17);
+    }
+
+    @Test
+    public void checkCalculateScoreAllRollswithSpare(){
+        String scoreboard = "14 23 -4 53 62 81 71 8/ 23 -2";
+        int score = bowl.calculateScore(scoreboard);
+        Assertions.assertEquals(score, 66);
+    }
+
+    @Test
+    public void checkCalculateScoreAllRollswithSpares(){
+        String scoreboard = "5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/5";
+        int score = bowl.calculateScore(scoreboard);
+        Assertions.assertEquals(score, 150);
+    }
 }

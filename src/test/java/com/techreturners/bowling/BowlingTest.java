@@ -36,9 +36,39 @@ public class BowlingTest {
     }
 
     @Test
-    public void checkCalculateScoreOneRollswithBothMiss(){
+    public void checkCalculateScoreOneRollwithBothMiss(){
         String scoreboard = "--";
         int score = bowl.calculateScore(scoreboard);
         Assertions.assertEquals(score, 0);
     }
+
+    @Test
+    public void checkCalculateScoreOneRollwithOneMiss(){
+        String scoreboard = "-4";
+        int score = bowl.calculateScore(scoreboard);
+        Assertions.assertEquals(score, 4);
+    }
+
+    @Test
+    public void checkCalculateScoreTwoRollswithMiss(){
+        String scoreboard = "14 -3";
+        int score = bowl.calculateScore(scoreboard);
+        Assertions.assertEquals(score, 8);
+    }
+
+    @Test
+    public void checkCalculateScoreFiveRollswithMiss(){
+        String scoreboard = "14 -3 4- 53 62 ";
+        int score = bowl.calculateScore(scoreboard);
+        Assertions.assertEquals(score, 28);
+    }
+
+    @Test
+    public void checkCalculateScoreAllRollswithMiss(){
+        String scoreboard = "14 23 -4 53 62 81 71 81 23 -2";
+        int score = bowl.calculateScore(scoreboard);
+        Assertions.assertEquals(score, 63);
+    }
+
+
 }

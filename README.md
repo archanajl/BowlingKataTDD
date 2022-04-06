@@ -61,6 +61,9 @@ We can briefly summarize the scoring for this form of bowling:
    X X X X X X X X X X X X (12 rolls: 12 strikes) = 10 frames * 30 points = 300
    Also handle the cases where the stike is followed by a spare or another strike.
 
+### <ins> Testcases </ins>
+
+Please click [here](https://htmlpreview.github.io/?https://github.com/archanajl/BowlingKataTDD/blob/master/Test%20Results%20-%20BowlingTest.html) to see the test results.
 ### <ins>Technologies Used</ins>
 
     Java

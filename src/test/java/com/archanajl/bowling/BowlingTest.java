@@ -1,4 +1,4 @@
-package com.techreturners.bowling;
+package com.archanajl.bowling;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;

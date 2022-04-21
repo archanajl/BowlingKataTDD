@@ -1,4 +1,4 @@
-package com.techreturners.bowling;
+package com.archanajl.bowling;
 
 public class Bowling {
 
